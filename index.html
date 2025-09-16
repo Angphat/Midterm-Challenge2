@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Midterm Challenge</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar" id="top">
+    <div class="logo">
+      <!-- SVG Logo -->
+      <svg width="50" height="50" viewBox="0 0 100 100">
+        <circle cx="50" cy="50" r="40" fill="#4CAF50"/>
+        <text x="50" y="55" text-anchor="middle" font-size="20" fill="white">FTU</text>
+      </svg>
+    </div>
+    <ul>
+      <li><a href="#top">Top</a></li>
+      <li><a href="#intro">Introduction</a></li>
+      <li><a href="#palestine">Palestine</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#footer">Bottom</a></li>
+    </ul>
+  </nav>
+
+  <!-- Tab Bar (Tablet) -->
+  <div class="tab-bar">
+    <a href="#intro">Intro</a>
+    <a href="#palestine">Palestine</a>
+    <a href="#contact">Contact</a>
+    <a href="#footer">Bottom</a>
+  </div>
+
+  <!-- Hamburger Menu (Mobile) -->
+  <div class="hamburger">☰</div>
+  <div class="mobile-menu">
+    <a href="#intro">Intro</a>
+    <a href="#palestine">Palestine</a>
+    <a href="#contact">Contact</a>
+    <a href="#footer">Bottom</a>
+  </div>
+
+  <!-- Build your mindset Section -->
+  <section id="intro" class="intro">
+    <h1>Build Your Mindset</h1>
+    <p>This section covers half of the laptop screen height.</p>
+  </section>
+
+  <!-- Palestine Cards -->
+  <section id="palestine" class="cards">
+    <h2>Palestine Governorates</h2>
+    <div class="card-container">
+      <div class="card"><img src="images/bethlehem.jpg"><h3>Bethlehem</h3><p>Known as the birthplace of Jesus.</p></div>
+      <div class="card"><img src="images/hebron.jpg"><h3>Hebron</h3><p>Historic city famous for Al-Ibrahimi Mosque.</p></div>
+      <div class="card"><img src="images/jenin.jpg"><h3>Jenin</h3><p>Known for its rich agriculture.</p></div>
+      <div class="card"><img src="images/jericho.jpg"><h3>Jericho</h3><p>One of the oldest inhabited cities.</p></div>
+      <div class="card"><img src="images/nablus.jpg"><h3>Nablus</h3><p>Famous for its knafeh sweet.</p></div>
+      <div class="card"><img src="images/qalqilya.jpg"><h3>Qalqilya</h3><p>Small city surrounded by the wall.</p></div>
+      <div class="card"><img src="images/quds.jpg"><h3>Quds (Jerusalem)</h3><p>Capital of Palestine.</p></div>
+      <div class="card"><img src="images/ramallah.jpg"><h3>Ramallah</h3><p>Administrative capital of Palestine.</p></div>
+      <div class="card"><img src="images/deir-al-balah.jpg"><h3>Deir al-Balah</h3><p>City in central Gaza Strip.</p></div>
+      <div class="card"><img src="images/gaza.jpg"><h3>Gaza</h3><p>Largest city in Gaza Strip.</p></div>
+      <div class="card"><img src="images/khan-yunis.jpg"><h3>Khan Yunis</h3><p>City in southern Gaza Strip.</p></div>
+      <div class="card"><img src="images/rafah.jpg"><h3>Rafah</h3><p>Border city with Egypt.</p></div>
+      <div class="card"><img src="images/tulkarm.jpg"><h3>Tulkarm</h3><p>Famous for its fertile lands.</p></div>
+      <div class="card"><img src="images/tubas.jpg"><h3>Tubas</h3><p>Agricultural hub in Jordan Valley.</p></div>
+      <div class="card"><img src="images/salfit.jpg"><h3>Salfit</h3><p>Known for its olive trees.</p></div>
+    </div>
+  </section>
+
+  <!-- Contact Me Form -->
+  <section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <form>
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="text" name="subject" placeholder="Subject" required>
+      <input type="tel" name="phone" placeholder="Phone Number" pattern="[0-9]+" required>
+      <input type="email" name="email" placeholder="Email (@ftu.ac.th)" pattern=".+@ftu\.ac\.th" required>
+      <input type="password" name="secret" placeholder="Secret Word" minlength="8"
+             pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}" required>
+      <textarea name="message" placeholder="Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <p>&copy; 2025 Midterm Challenge. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Go to Top Button -->
+  <button id="topBtn">↑ Top</button>
+
+  <script>
+    // Go to Top Button
+    const topBtn = document.getElementById("topBtn");
+    window.onscroll = function() {
+      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        topBtn.style.display = "block";
+      } else {
+        topBtn.style.display = "none";
+      }
+    };
+    topBtn.onclick = function() {
+      window.scrollTo({top: 0, behavior: 'smooth'});
+    };
+
+    // Hamburger toggle
+    const hamburger = document.querySelector(".hamburger");
+    const mobileMenu = document.querySelector(".mobile-menu");
+    hamburger.onclick = function() {
+      mobileMenu.classList.toggle("show");
+    };
+  </script>
+</body>
+</html>
