@@ -7,9 +7,6 @@ body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
   background-color: #f0f0f0;
-  background-image: url("images/background.jpg");
-  background-size: cover;
-  background-position: center;
 }
 
 /* Navbar */
@@ -78,7 +75,7 @@ body {
 /* Intro */
 .intro {
   height: 50vh;
-  background: #f4f1f1;
+  background: #5d77a4;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -95,7 +92,7 @@ body {
   gap: 15px;
 }
 .card {
-  border: 1px solid #ccc;
+  border: 1px solid #5e79a8;
   padding: 15px;
   text-align: center;
 }
@@ -116,7 +113,7 @@ body {
 }
 .contact input, .contact textarea, .contact button {
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid #587ba1;
 }
 
 /* Footer */
@@ -135,14 +132,14 @@ footer {
   right: 20px;
   padding: 10px;
   border: none;
-  background: #4CAF50;
+  background: #536898;
   color: white;
   cursor: pointer;
   border-radius: 5px;
   transition: background 0.3s;
 }
 #topBtn:hover {
-  background: #45a049;
+  background: #524f86;
 }
 
 /* Responsive */
